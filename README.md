@@ -1,5 +1,6 @@
 # IoT Temperture Monitoring System
-IoT-Based Temperature monitoring system using MQTT protocol and Flask Micro-Framework for visualisation.
+IoT-Based Temperature monitoring system using MQTT protocol and Flask Micro-Framework for visualisation.<br>
+The project is deployed on Heroku, you can check it out from here: [IoT temperture Monitor](https://temp-monitoring-iot-system.herokuapp.com/)
 
 ## Overview
 This project presents a standalone web server with a Raspberry Pi MQTT server that displays temperature readings with a DHT22/DHT11 sensor.
@@ -25,20 +26,27 @@ Three BreadBoard are used, each of which, houses the ESP8266 micro controller, t
 - A Web Server (using Flask MicroFramework)
 
 ## Setup
-1. Raspberry PI Setup:
-Using a software such as Putty would be great to connect to the raspberry PI.<br>
-First run the commands:<br>
-`sudo apt-get update`<br>
-`sudo apt-get upgrade`<br>
-Then you need to install mosquitto on the raspberry using the command:<br>
-`sudo apt install -y mosquitto mosquitto-clients`<br>
-Check mosquitto version with `mosquitto -v` and let it run on background using `mosquitto -d` command.<br>
-You can also check the status of mosquitto at any time using:<br>
-`systemctl status mosquitto.d`<br>
-2. Setup the web server:
-On your computer, you need to install Flask micro framework using the commands:<br>
-`pip install flask`<br>
-`pip install flask-socketio`<br>
-You also need mqtt python package, just run:<br>
-`pip install paho-mqtt`<br>
+**1. Raspberry PI Setup:**<br>
+  Using a software such as Putty would be great to connect to the raspberry PI.<br>
+  First run the commands:<br>
+  `sudo apt-get update`<br>
+  `sudo apt-get upgrade`<br>
+  Then you need to install mosquitto on the raspberry using the command:<br>
+  `sudo apt install -y mosquitto mosquitto-clients`<br>
+  Check mosquitto version with `mosquitto -v` and let it run on background using `mosquitto -d` command.<br>
+  You can also check the status of mosquitto at any time using:<br>
+  `systemctl status mosquitto.d`
+<br><br>
+**2. Setup the web server:**<br>
+  On your computer, you need to install Flask micro framework using the commands:<br>
+  `pip install flask`<br>
+  `pip install flask-socketio`<br>
+  You also need mqtt package, just run:<br>
+  `pip install paho-mqtt`<br>
+  `pip install mqtt-client`<br>
+
+## Testing
+Clone my repository using: `git clone https://github.com/fahdarhalai/IoTTempMonitoringSystem`. Run the project with `python app.py` then go to `http://localhost:8181`.<br>
+The project is also deployed on Heroku, it uses Eclipse public mqtt Broker for publishing/subscribing to topics, you can view it at [IoT temperture Monitor](https://temp-monitoring-iot-system.herokuapp.com/). Each client publishing temperture values to a specific topic used throughout the development of the project, will eventually make the application running in real time. I wrote a shell script too, that simulates the three NodeMCU modules, publishing temperture readings to Eclipse MQTT Broker, you can run it in git bash(For windows users).
+![Screenshot](https://user-images.githubusercontent.com/41004675/77823485-c6a49b00-70fb-11ea-92cd-4c45831eeaaa.png)
 
