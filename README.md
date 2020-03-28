@@ -26,21 +26,19 @@ Three BreadBoard are used, each of which, houses the ESP8266 micro controller, t
 
 ## Setup
 1. Raspberry PI Setup:
-Using a software such as Putty would be great to connect to the raspberry PI.
-First run the commands:
-`sudo apt-get update
-sudo apt-get upgrade`
-Then you need to install mosquitto on the raspberry using the command:
-`sudo apt install -y mosquitto mosquitto-clients`
-Check mosquitto version with `mosquitto -v` and let it run on background using `mosquitto -d` command.
-You can also check the status of mosquitto at any time using:
-`systemctl status mosquitto.d`
+Using a software such as Putty would be great to connect to the raspberry PI.<br>
+First run the commands:<br>
+`sudo apt-get update`<br>
+`sudo apt-get upgrade`<br>
+Then you need to install mosquitto on the raspberry using the command:<br>
+`sudo apt install -y mosquitto mosquitto-clients`<br>
+Check mosquitto version with `mosquitto -v` and let it run on background using `mosquitto -d` command.<br>
+You can also check the status of mosquitto at any time using:<br>
+`systemctl status mosquitto.d`<br>
 2. Setup the web server:
-On your computer, you need to install Flask micro framework using the commands:
-`
-pip install flask
-pip install flask-socketio
-`
-You also need mqtt python package, just run:
-`pip install paho-mqtt`
+On your computer, you need to install Flask micro framework using the commands:<br>
+`pip install flask`<br>
+`pip install flask-socketio`<br>
+You also need mqtt python package, just run:<br>
+`pip install paho-mqtt`<br>
 
