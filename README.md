@@ -1,6 +1,6 @@
 # IoT Temperture Monitoring System
 IoT-Based Temperature monitoring system using MQTT protocol and Flask Micro-Framework for visualisation.<br>
-The project is deployed on Heroku, you can check it out from here: [IoT temperture Monitor](https://temp-monitoring-iot-system.herokuapp.com/)
+**The project is deployed on Heroku, you can check it out from here: [IoT temperture Monitor](https://temp-monitoring-iot-system.herokuapp.com/)**
 
 ## Overview
 This project presents a standalone web server with a Raspberry Pi MQTT server that displays temperature readings with a DHT22/DHT11 sensor.
